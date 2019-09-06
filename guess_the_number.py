@@ -33,6 +33,12 @@ def check_guess(guess, secret):
     if guess > secret:
         return too_high
 
+def play_again():
+    print('Do you want to play again? (y/n)')
+    if(input() == 'y'):
+        return main()
+    else:
+        return False
 
 def main():
 
@@ -51,6 +57,7 @@ def main():
             break
     
     print('Number of guesses: ', counter)
+    play_again()
 
 
 if __name__ == '__main__':
